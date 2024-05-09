@@ -1,10 +1,12 @@
 import Image from "next/image";
+import SectionContainer from "./components/SectionContainer";
 
 export default function Home() {
   return (
-    <main className="bg-red flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <main className="flex flex-grow items-center justify-between min-h-screen bg-black">
+      <div className="grow min-h-screen bg-cover bg-center bg-[url('./macoswallpaper.jpg')]">
+        {/* Panel in the center with information that displays depending on what user clicks */}
+        {/* Buttons at the bottom so user can click to display information */}
       </div>
     </main>
   );
