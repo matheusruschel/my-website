@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        sharp: '1px 1px 0px 1px rgba(0, 0, 0, 0.6)',
+      },
       screens: {
         sm: "480px",
         md: "768px",
@@ -18,6 +21,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "panel-gray": "#d8d8d8"
+      }
     },
   },
   plugins: [],
