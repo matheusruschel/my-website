@@ -1,10 +1,11 @@
 import { ClassNameValue } from "tailwind-merge";
+import Image from "next/image";
 
 type Props = {
   className?: ClassNameValue;
 };
 
-export default function ButtonStack(props: Props) {
+export default function ButtonStackComponent(props: Props) {
   const { className } = props;
   return (
     <main
