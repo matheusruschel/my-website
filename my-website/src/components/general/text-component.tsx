@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { TextVariant } from "@/app/types";
+import { TextVariant } from "@/types";
 
 type Props = {
   children: ReactNode;

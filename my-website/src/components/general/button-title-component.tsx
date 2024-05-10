@@ -13,8 +13,8 @@ type Props = {
 
 export default function ButtonTitleComponent({
   iconName,
-  width = 25,
-  height = 25,
+  width = 60,
+  height = 60,
   title,
   classNameTitle,
   classNameButton,

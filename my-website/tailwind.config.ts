@@ -8,8 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        chicago: ["Chicago", "sans-serif"],
+        "chicago-pix": ["pix Chicago", "sans-serif"],
+        apple: ["Apple Garamond Light", "sans-serif"]
+    },
       boxShadow: {
         sharp: '1px 1px 0px 1px rgba(0, 0, 0, 0.6)',
+        "sharp-blur": '-1px -1px 1px 2px rgba(0, 0, 0, 0.1)'
       },
       screens: {
         sm: "480px",

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/53dc764fd0dbbb3140b7909afd437722?family=Chicago);
+@import url(https://db.onlinewebfonts.com/c/d4244fd536be2c4de94a657a0017fcac?family=Apple+Garamond+Light);
+@import url(https://db.onlinewebfonts.com/c/e7a96e9e23ebdeb78591f826ce78ca96?family=pix+Chicago);
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* @font-face {
+  font-family: "Chicago";
+  src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot");
+  src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.svg#Chicago")
+      format("svg");
+} */
+
+@font-face {
+  font-family: "Apple Garamond Light";
+  src: url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.eot");
+  src: url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.svg#Apple Garamond Light")format("svg");
+}
+
+@font-face {
+  font-family: "pix Chicago";
+  src: url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.eot");
+  src: url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.svg#pix Chicago")format("svg");
+}

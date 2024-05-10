@@ -1,5 +1,6 @@
 import { ClassNameValue } from "tailwind-merge";
 import Image from "next/image";
+import ButtonTitleComponent from "./button-title-component";
 
 type Props = {
   className?: ClassNameValue;
@@ -9,15 +10,11 @@ export default function ButtonStackComponent(props: Props) {
   const { className } = props;
   return (
     <main
-      className={`h-[200px] w-full ${className}`}
-    >
-      <Image
-      width={50}
-      height={50}
-      src={"iconString"}
-      alt="Logo"
       className={`${className}`}
-    />
+    >
+      <ButtonTitleComponent iconName={""} title={""}>
+        
+      </ButtonTitleComponent>
     </main>
   );
 }
