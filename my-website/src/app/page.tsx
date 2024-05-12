@@ -3,6 +3,7 @@ import InformationPanel from "../components/information-panel";
 import ButtonTitleComponent from "@/components/general/button-title-component";
 import { getHome } from "@/contentful/home";
 import Text from "@/components/general/text-component";
+import ProfilePage from "@/components/profile-page";
 
 export default async function Home() {
   const { fields } = await getHome();
@@ -10,15 +11,10 @@ export default async function Home() {
   if (!fields) return null;
 
   return (
-    <main className="grow min-h-screen bg-cover bg-center bg-[url('./macoswallpaper.jpg')]">
-      <div className="flex flex-col items-center justify-center content-center h-screen">
-        <ButtonTitleComponent
-          iconName={"/1.png"}
-          title={"Who am I"}
-        ></ButtonTitleComponent>
-        <Text>{fields.headerText}</Text>
-        <InformationPanel headerText={"About This Developer"} />
-      </div>
+    <main className="flex flex-col items-center justify-center content-center">
+      <InformationPanel headerText={"About This Developer"}>
+          <ProfilePage></ProfilePage>
+      </InformationPanel>
     </main>
   );
 }

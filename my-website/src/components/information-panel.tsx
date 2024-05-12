@@ -5,7 +5,9 @@ import ProfilePage from "./profile-page";
 type Props = {
   className?: ClassNameValue;
   headerText: String;
-};
+} & {
+  children: React.ReactNode;
+}
 
 export default function InformationPanel(props: Props) {
   const { className } = props;
@@ -17,7 +19,7 @@ export default function InformationPanel(props: Props) {
         {props.headerText}
       </Text>
       <div className="grow w-full border-opacity-70 border-[2px] border-black shadow-sharp-blur">
-        <ProfilePage></ProfilePage>
+        {props.children}
       </div>
     </main>
   );
