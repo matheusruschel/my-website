@@ -11,6 +11,9 @@ type Props = {
   classNameButton?: ClassNameValue;
   iconName: string;
   title: string;
+  isSelected: boolean;
+  index: number;
+  onClick: (index: number) => void;
 };
 
 function onClick(event: Event) {
@@ -24,6 +27,9 @@ export default function ButtonTitleComponent({
   title,
   classNameTitle,
   classNameButton,
+  isSelected,
+  index,
+  onClick,
 }: Props) {
   const [isButtonActive, setIsButtonActive] = useState(false);
 
@@ -31,28 +37,22 @@ export default function ButtonTitleComponent({
 
   return (
     <div className="flex flex-col sm:px-1 md:px-20 !items-center !justify-center !content-center">
-      <Link
-        href={"/"}
-        onClick={() => {
-          console.log("button pressed");
-          setIsButtonActive(!isButtonActive);
-        }}
-      >
+      <Link href={"/"} onClick={() => onClick(index)}>
         <IconComponent
           width={width}
           height={height}
           iconName={iconName}
-          className={` ${isButtonActive === true &&
+          className={` ${isSelected === true &&
             "brightness-50"} ${classNameButton}`}
         />
         <div
           className={`px-[4px] w-fit ${
-            isButtonActive === true ? "bg-blue-950" : "bg-panel-gray"
+            isSelected === true ? "bg-blue-950" : "bg-panel-gray"
           }`}
         >
           <Text
             className={`!text-center !text-[15px] font-apple  ${
-              isButtonActive === true
+              isSelected === true
                 ? "bg-blue-950 !text-white"
                 : "bg-panel-gray !text-black"
             } ${classNameTitle}`}
