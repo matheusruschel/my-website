@@ -5,20 +5,19 @@ import { use, useState } from "react";
 import Image from "next/image";
 import ButtonTitleComponent from "./general/button-title-component";
 import { getHeader } from "@/contentful/header";
+import { HEADER } from "./utils/header";
 
 export default function Header() {
-  const { fields } = use(getHeader());
-
-  const { headerButtons } = fields || {};
+  const { headerMenus } = HEADER || {};
 
   return (
     <div className="flex items-center justify-center content-center">
       <div className="flex">
-        {headerButtons?.map((button) => (
+        {headerMenus?.map((headerMenu: any) => (
           <ButtonTitleComponent
-            key={button?.fields.buttonTitle}
-            iconName={button?.fields.iconPath ?? "/17.png"}
-            title={button?.fields.buttonTitle ?? ""}
+            key={headerMenu?.fields.buttonTitle}
+            iconName={headerMenu?.fields.iconPath ?? "/17.png"}
+            title={headerMenu?.fields.buttonTitle ?? ""}
           ></ButtonTitleComponent>
         ))}
       </div>

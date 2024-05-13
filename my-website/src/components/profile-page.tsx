@@ -18,6 +18,7 @@ export default function ProfilePage(props: Props) {
             src={"/IMG_7689.JPG"}
             alt="Icon"
             className={``}
+            priority={true}
           />
           <Text className="pl-[20px] font-apple text-black !text-[120px]">
             {"Mat Ruschel"}
@@ -25,17 +26,17 @@ export default function ProfilePage(props: Props) {
         </div>
       </div>
       <div className="flew flew-col">
-          <div>
+        <div>
           <Text className="font-chicago-pix text-black !text-[20px]">
             {"Mat Ruschel"}
           </Text>
-          </div>
-          <div>
-          <Text className="font-chicago-pix text-black !text-[20px]">
-            {"Mat Ruschel"}
-          </Text>
-          </div>
         </div>
+        <div>
+          <Text className="font-chicago-pix text-black !text-[20px]">
+            {"Mat Ruschel"}
+          </Text>
+        </div>
+      </div>
     </main>
   );
 }

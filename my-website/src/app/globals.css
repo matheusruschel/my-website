@@ -21,12 +21,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -34,7 +28,7 @@ body {
     text-wrap: balance;
   }
 }
-
+/* 
 @font-face {
   font-family: "Chicago";
   src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot");
@@ -78,4 +72,4 @@ body {
       format("truetype"),
     url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.svg#pix Chicago")
       format("svg");
-}
+} */

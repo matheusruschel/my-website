@@ -1,6 +1,8 @@
 import { ClassNameValue } from "tailwind-merge";
 import IconComponent from "./icon-component";
 import Text from "./text-component";
+import { useState } from "react";
+import Link from "next/link";
 
 type Props = {
   width?: number;
@@ -11,35 +13,54 @@ type Props = {
   title: string;
 };
 
+function onClick(event: Event) {
+  event.preventDefault();
+}
+
 export default function ButtonTitleComponent({
   iconName,
-  width = 60,
-  height = 60,
+  width = 50,
+  height = 50,
   title,
   classNameTitle,
   classNameButton,
 }: Props) {
+  const [isButtonActive, setIsButtonActive] = useState(false);
+
   if (iconName === "") return null;
 
   return (
     <div className="flex flex-col sm:px-1 md:px-20 !items-center !justify-center !content-center">
-      <div className="p-[5px] !items-center !justify-center !content-center bg-blue-400">
-        <button onClick={(event) => event.preventDefault()}>
-          <IconComponent
-            width={width}
-            height={height}
-            iconName={iconName}
-            className={`${classNameButton}`}
-          />
-          <div className="px-[5px] bg-panel-gray w-full">
-            <Text
-              className={`!text-center !text-[15px] font-apple !text-black ${classNameTitle}`}
-            >
-              {title}
-            </Text>
-          </div>
-        </button>
-      </div>
+      <Link
+        href={"/"}
+        onClick={() => {
+          console.log("button pressed");
+          setIsButtonActive(!isButtonActive);
+        }}
+      >
+        <IconComponent
+          width={width}
+          height={height}
+          iconName={iconName}
+          className={` ${isButtonActive === true &&
+            "brightness-50"} ${classNameButton}`}
+        />
+        <div
+          className={`px-[4px] w-fit ${
+            isButtonActive === true ? "bg-blue-950" : "bg-panel-gray"
+          }`}
+        >
+          <Text
+            className={`!text-center !text-[15px] font-apple  ${
+              isButtonActive === true
+                ? "bg-blue-950 !text-white"
+                : "bg-panel-gray !text-black"
+            } ${classNameTitle}`}
+          >
+            {title}
+          </Text>
+        </div>
+      </Link>
     </div>
   );
 }

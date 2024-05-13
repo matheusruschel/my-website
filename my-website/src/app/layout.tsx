@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col grow bg-cover bg-center bg-[url('./macoswallpaper.jpg')]">
+      <body className="flex flex-col bg-background-purple">
         <Header />
         <main>{children}</main>
       </body>

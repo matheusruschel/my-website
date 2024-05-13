@@ -12,17 +12,9 @@ export type ButtonVariant = "primary" | "secondary" | "tertiary" | "quaternary";
 
 type Link = {
   fields: {
-    linkName: string;
-    linkUrl: string;
+    iconPath: string;
+    buttonTitle: string;
   };
-};
-
-export type FooterType = {
-  linkSections: LinkSectionType[];
-  socialMediaIcons: SocialMediaIcons[];
-  locations: string;
-  email: string;
-  phoneNumber: string;
 };
 
 export type LinkSectionType = {
@@ -32,19 +24,6 @@ export type LinkSectionType = {
   };
 };
 
-export type SocialMediaIcons = {
-  fields: {
-    iconName: string;
-    ctaUrl: string;
-    iconUrl: string;
-  };
-};
-
 export type HeaderType = {
-  title: string;
-  phoneNumber: string;
-  tribalscaleLogoUrl: string;
-  headerDropdownMenus: LinkSectionType[];
   headerMenus: Link[];
-  connectButton: Link;
 };

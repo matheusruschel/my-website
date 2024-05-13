@@ -23,6 +23,7 @@ export default function IconComponent({
       src={iconName}
       alt="Icon"
       className={`${className}`}
+      priority={true}
     />
   );
 }
