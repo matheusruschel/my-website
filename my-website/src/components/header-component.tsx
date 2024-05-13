@@ -1,22 +1,27 @@
 "use client";
 import Link from "next/link";
 import Text from "./general/text-component";
-import { useState } from "react";
+import { use, useState } from "react";
 import Image from "next/image";
 import ButtonTitleComponent from "./general/button-title-component";
+import { getHeader } from "@/contentful/header";
 
 export default function Header() {
-  // const headerData = HEADER;
+  const { fields } = use(getHeader());
 
-  // const { buttonsList } =
-  //   headerData || {};
+  const { headerButtons } = fields || {};
 
   return (
-    <div className="flex flex-col items-center justify-center content-center">
-     <ButtonTitleComponent
-          iconName={"/1.png"}
-          title={"Who am I"}
-        ></ButtonTitleComponent>
+    <div className="flex items-center justify-center content-center">
+      <div className="flex">
+        {headerButtons?.map((button) => (
+          <ButtonTitleComponent
+            key={button?.fields.buttonTitle}
+            iconName={button?.fields.iconPath ?? "/17.png"}
+            title={button?.fields.buttonTitle ?? ""}
+          ></ButtonTitleComponent>
+        ))}
+      </div>
     </div>
   );
 }

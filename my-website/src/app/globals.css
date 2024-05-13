@@ -35,7 +35,7 @@ body {
   }
 }
 
-/* @font-face {
+@font-face {
   font-family: "Chicago";
   src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot");
   src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot?#iefix")
@@ -48,24 +48,34 @@ body {
       format("truetype"),
     url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.svg#Chicago")
       format("svg");
-} */
+}
 
 @font-face {
   font-family: "Apple Garamond Light";
   src: url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.eot");
-  src: url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.svg#Apple Garamond Light")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d4244fd536be2c4de94a657a0017fcac.svg#Apple Garamond Light")
+      format("svg");
 }
 
 @font-face {
   font-family: "pix Chicago";
   src: url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.eot");
-  src: url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.svg#pix Chicago")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.svg#pix Chicago")
+      format("svg");
 }

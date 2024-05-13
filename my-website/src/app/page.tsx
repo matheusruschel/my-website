@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center content-center">
-      <InformationPanel headerText={"About This Developer"}>
+      <InformationPanel headerText={fields.headerText ?? ""}>
           <ProfilePage></ProfilePage>
       </InformationPanel>
     </main>

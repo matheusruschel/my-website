@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col overflow-x-hidden grow min-h-screen bg-cover bg-center bg-[url('./macoswallpaper.jpg')]">
+      <body className="flex flex-col grow bg-cover bg-center bg-[url('./macoswallpaper.jpg')]">
         <Header />
-        <main className="w-full-screen grow">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

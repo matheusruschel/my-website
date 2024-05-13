@@ -22,16 +22,24 @@ export default function ButtonTitleComponent({
   if (iconName === "") return null;
 
   return (
-    <div className="">
-      <IconComponent
-        width={width}
-        height={height}
-        iconName={iconName}
-        className={`${classNameButton}`}
-      />
-      <Text className={`!text-[12px] md:!text-[14px] !font-bold !text-grey-700 !leading-[183%] md:!leading-[219%] lg:!w-[640px] ${classNameTitle}`}>
-        {title}
-      </Text>
+    <div className="flex flex-col sm:px-1 md:px-20 !items-center !justify-center !content-center">
+      <div className="p-[5px] !items-center !justify-center !content-center bg-blue-400">
+        <button onClick={(event) => event.preventDefault()}>
+          <IconComponent
+            width={width}
+            height={height}
+            iconName={iconName}
+            className={`${classNameButton}`}
+          />
+          <div className="px-[5px] bg-panel-gray w-full">
+            <Text
+              className={`!text-center !text-[15px] font-apple !text-black ${classNameTitle}`}
+            >
+              {title}
+            </Text>
+          </div>
+        </button>
+      </div>
     </div>
   );
 }
