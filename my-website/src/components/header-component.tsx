@@ -9,7 +9,7 @@ export default function Header() {
   const [indexOfButtonSelected, setIndexOfButtonSelected] = useState(0);
 
   return (
-    <div className="flex items-center justify-center content-center">
+    <div className="py-[15px] flex items-center justify-center content-center">
       <div className="flex">
         {headerMenus?.map((headerMenu: any, index) => (
           <ButtonTitleComponent

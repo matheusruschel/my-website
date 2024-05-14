@@ -14,13 +14,7 @@ type Link = {
   fields: {
     iconPath: string;
     buttonTitle: string;
-  };
-};
-
-export type LinkSectionType = {
-  fields: {
-    linkSectionTitle: string;
-    links: Link[];
+    url: string;
   };
 };
 

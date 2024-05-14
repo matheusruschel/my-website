@@ -28,7 +28,6 @@ body {
     text-wrap: balance;
   }
 }
-/* 
 @font-face {
   font-family: "Chicago";
   src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot");
@@ -72,4 +71,14 @@ body {
       format("truetype"),
     url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.svg#pix Chicago")
       format("svg");
-} */
+}
+
+@font-face {
+  font-family: "DePixelBreit";
+  src: url("/fonts/depixelbreit.woff2") format("woff2"),
+    url("/fonts/depixelbreit.woff") format("woff"),
+    url("/fonts/DePixelBreit.ttf") format("truetype"),
+    url("/fonts/DePixelBreit.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,6 +1,7 @@
 import { ClassNameValue } from "tailwind-merge";
 import Text from "./general/text-component";
 import Image from "next/image";
+import ProgressBarComponent from "./general/progress-bar-component";
 
 type Props = {
   className?: ClassNameValue;
@@ -28,12 +29,7 @@ export default function ProfilePage(props: Props) {
       <div className="flew flew-col">
         <div>
           <Text className="font-chicago-pix text-black !text-[20px]">
-            {"Mat Ruschel"}
-          </Text>
-        </div>
-        <div>
-          <Text className="font-chicago-pix text-black !text-[20px]">
-            {"Mat Ruschel"}
+            {"I'm bla bla bls"}
           </Text>
         </div>
       </div>

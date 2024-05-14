@@ -36,25 +36,26 @@ export default function ButtonTitleComponent({
   if (iconName === "") return null;
 
   return (
-    <div className="flex flex-col sm:px-1 md:px-20 !items-center !justify-center !content-center">
-      <Link href={"/"} onClick={() => onClick(index)}>
+    <div className="flex flex-col min-w-[100px] sm:px-5 md:px-[35px] lg:px-[50px] !items-center !justify-center !content-center">
+      <Link
+        className="flex flex-col !items-center !justify-center !content-center"
+        href={"/"}
+        onClick={() => onClick(index)}
+      >
         <IconComponent
           width={width}
           height={height}
           iconName={iconName}
-          className={` ${isSelected === true &&
-            "brightness-50"} ${classNameButton}`}
+          className={`${isSelected && "brightness-50"} ${classNameButton}`}
         />
         <div
-          className={`px-[4px] w-fit ${
-            isSelected === true ? "bg-blue-950" : "bg-panel-gray"
+          className={`px-[1px] w-fit h-auto  ${
+            isSelected ? "bg-blue-950" : "bg-opacity-80 bg-gray-300"
           }`}
         >
           <Text
             className={`!text-center !text-[15px] font-apple  ${
-              isSelected === true
-                ? "bg-blue-950 !text-white"
-                : "bg-panel-gray !text-black"
+              isSelected ? "!text-white" : "!text-black"
             } ${classNameTitle}`}
           >
             {title}
