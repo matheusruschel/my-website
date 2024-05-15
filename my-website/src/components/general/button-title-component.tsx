@@ -54,7 +54,7 @@ export default function ButtonTitleComponent({
           }`}
         >
           <Text
-            className={`!text-center !text-[15px] font-apple  ${
+            className={`font-dePixelSchmal !text-center !text-[11px] font-apple  ${
               isSelected ? "!text-white" : "!text-black"
             } ${classNameTitle}`}
           >

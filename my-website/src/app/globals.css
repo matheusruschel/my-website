@@ -1,9 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(https://db.onlinewebfonts.com/c/53dc764fd0dbbb3140b7909afd437722?family=Chicago);
 @import url(https://db.onlinewebfonts.com/c/d4244fd536be2c4de94a657a0017fcac?family=Apple+Garamond+Light);
-@import url(https://db.onlinewebfonts.com/c/e7a96e9e23ebdeb78591f826ce78ca96?family=pix+Chicago);
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,20 +27,6 @@ body {
     text-wrap: balance;
   }
 }
-@font-face {
-  font-family: "Chicago";
-  src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot");
-  src: url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.svg#Chicago")
-      format("svg");
-}
 
 @font-face {
   font-family: "Apple Garamond Light";
@@ -59,26 +44,51 @@ body {
 }
 
 @font-face {
-  font-family: "pix Chicago";
-  src: url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.eot");
-  src: url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/e7a96e9e23ebdeb78591f826ce78ca96.svg#pix Chicago")
-      format("svg");
-}
-
-@font-face {
   font-family: "DePixelBreit";
   src: url("/fonts/depixelbreit.woff2") format("woff2"),
     url("/fonts/depixelbreit.woff") format("woff"),
     url("/fonts/DePixelBreit.ttf") format("truetype"),
     url("/fonts/DePixelBreit.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DePixelBreitFett";
+  src: url("/fonts/depixelbreitfett.woff2") format("woff2"),
+    url("/fonts/depixelbreitfett.woff") format("woff"),
+    url("/fonts/DePixelBreitFett.ttf") format("truetype"),
+    url("/fonts/DePixelBreitFett.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DePixelHalbfett";
+  src: url("/fonts/depixelhalbfett.woff2") format("woff2"),
+    url("/fonts/depixelhalbfett.woff") format("woff"),
+    url("/fonts/DePixelHalbfett.ttf") format("truetype"),
+    url("/fonts/DePixelHalbfett.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DePixelKlein";
+  src: url("/fonts/depixelklein.woff2") format("woff2"),
+    url("/fonts/depixelklein.woff") format("woff"),
+    url("/fonts/DePixelKlein.ttf") format("truetype"),
+    url("/fonts/DePixelKlein.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DePixelSchmal";
+  src: url("/fonts/depixelschmal.woff2") format("woff2"),
+    url("/fonts/depixelschmal.woff") format("woff"),
+    url("/fonts/DePixelSchmal.ttf") format("truetype"),
+    url("/fonts/DePixelSchmal.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }

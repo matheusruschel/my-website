@@ -9,6 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        dePixelSchmal: ["DePixelSchmal"],
+        dePixelKlein: ["DePixelKlein"],
+        dePixelHalbfett: ["DePixelHalbfett"],
+        dePixelBreitFett: ["DePixelBreit"],
         dePixelBreit: ["DePixelBreit"],
         chicago: ["Chicago", "sans-serif"],
         "chicago-pix": ["pix Chicago", "sans-serif"],

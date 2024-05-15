@@ -1,16 +1,20 @@
 import { ClassNameValue } from "tailwind-merge";
 import Text from "./general/text-component";
 import Image from "next/image";
-import ProgressBarComponent from "./general/progress-bar-component";
+import { TypeHomepageSkeleton } from "@/contentful/types";
+import { Entry } from "contentful";
+import RowListComponent from "./general/row-list-component";
 
-type Props = {
-  className?: ClassNameValue;
-};
+type Props = Entry<
+  TypeHomepageSkeleton,
+  "WITHOUT_UNRESOLVABLE_LINKS",
+  string
+>["fields"];
 
 export default function ProfilePage(props: Props) {
-  const { className } = props;
+  const { headerTitle, description, descriptionTitle, skills } = props;
   return (
-    <main className={`p-[7px] flex flex-col ${className}`}>
+    <main className={`p-[7px] flex flex-col`}>
       <div className="items-center justify-center content-center w-full h-48 bg-white border-opacity-70 border-[2.2px] border-black shadow-sharp-blur">
         <div className="flex items-center justify-center">
           <Image
@@ -18,21 +22,23 @@ export default function ProfilePage(props: Props) {
             height={150}
             src={"/IMG_7689.JPG"}
             alt="Icon"
-            className={``}
             priority={true}
           />
           <Text className="pl-[20px] font-apple text-black !text-[120px]">
-            {"Mat Ruschel"}
+            {headerTitle}
           </Text>
         </div>
       </div>
-      <div className="flew flew-col">
-        <div>
-          <Text className="font-chicago-pix text-black !text-[20px]">
-            {"I'm bla bla bls"}
-          </Text>
-        </div>
+      <div className="flex py-[10px]">
+        <Text className="min-w-[100px] font-dePixelHalbfett text-black !text-[12px]">
+          {descriptionTitle}
+        </Text>
+        <Text className="font-dePixelSchmal leading-6 text-black !text-[15px]">
+          {description}
+        </Text>
       </div>
+      {skills && <RowListComponent items={skills} />}
+      
     </main>
   );
 }

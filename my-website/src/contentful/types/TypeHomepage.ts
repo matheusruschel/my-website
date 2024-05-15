@@ -1,8 +1,12 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type { TypeSkillSkeleton } from "./TypeSkill";
 
 export interface TypeHomepageFields {
     headerText?: EntryFieldTypes.Symbol;
-    skills?: EntryFieldTypes.Array<EntryFieldTypes.Symbol>;
+    description?: EntryFieldTypes.Text;
+    skills?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeSkillSkeleton>>;
+    descriptionTitle?: EntryFieldTypes.Symbol;
+    headerTitle?: EntryFieldTypes.Symbol;
 }
 
 export type TypeHomepageSkeleton = EntrySkeletonType<TypeHomepageFields, "homepage">;
