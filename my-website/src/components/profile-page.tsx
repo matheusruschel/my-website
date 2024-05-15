@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypeHomepageSkeleton } from "@/contentful/types";
 import { Entry } from "contentful";
 import RowListComponent from "./general/row-list-component";
+import { mapSkillsToRowList } from "@/mapper/skill-mapper";
 
 type Props = Entry<
   TypeHomepageSkeleton,
@@ -37,8 +38,7 @@ export default function ProfilePage(props: Props) {
           {description}
         </Text>
       </div>
-      {skills && <RowListComponent items={skills} />}
-      
+      {skills && <RowListComponent items={mapSkillsToRowList(skills).items} />}
     </main>
   );
 }
