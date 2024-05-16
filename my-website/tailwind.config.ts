@@ -34,6 +34,7 @@ const config: Config = {
       },
       colors: {
         "panel-gray": "#d8d8d8",
+        "list-gray": "#E8E8E8",
         "background-purple": "#4D5C8F"
       },
       minWidth: {

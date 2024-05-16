@@ -16,7 +16,7 @@ type Props = Entry<
 export default function ProfilePage(props: Props) {
   const { headerTitle, description, descriptionTitle, skills } = props;
   return (
-    <GrayPanel>
+    <GrayPanel isBottomBorderEnabled={false}>
       <div className="p-[7px]">
         <div className="items-center justify-center content-center h-48 bg-white border-opacity-70 border-[2.2px] border-black shadow-sharp-blur">
           <div className="flex items-center justify-center">

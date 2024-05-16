@@ -13,7 +13,7 @@ type Props = {
 export default function InformationPanel(props: Props) {
   const { className } = props;
   return (
-    <GrayPanel className="flex flex-col items-center h-3/4 w-8/12 shadow-sharp" hasBottomBorder={false}>
+    <GrayPanel className="flex flex-col items-center h-3/4 w-8/12 shadow-sharp" isBottomBorderEnabled={false}>
       <div className="px-[5px] pb-[5px] flex flex-col items-center">
         <Text className="font-dePixelHalbfett text-black py-[5px] !text-[12px]">
           {props.headerText}
