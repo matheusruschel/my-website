@@ -1,8 +1,6 @@
 "use client";
-import { TypeSkillSkeleton } from "@/contentful/types";
-import { Entry } from "contentful";
 import Text from "./text-component";
-import { RowList } from "@/mapper/skill-mapper";
+import { RowList } from "@/functions/skill-mapper";
 import GrayPanel from "./gray-panel";
 import ProgressBarComponent from "./progress-bar-component";
 
@@ -12,20 +10,20 @@ export default function RowListComponent(props: Props) {
   const { items } = props;
 
   return (
-    <GrayPanel isTopBorderEnabled={false}>
-      <div className="bg-list-gray">
+    <GrayPanel className="lg:!w-[50%] md:!w-[50%] !w-[100%]">
+      <div className="flex flex-col bg-list-gray">
         {items?.map((item, index) => (
           <div
-            className="flex flew-row p-[15px] border-[1px] border-b-white"
+            className="flex flew-row border-[2px] border-b-white h-[30px]"
             key={index}
           >
             <Text className="!text-black">{item.title}</Text>
             <div className="flex flex-row">
-            <Text className="!text-black">{item.years}</Text>
-            <ProgressBarComponent
-              maxStorage={10}
-              currentStorage={parseInt(item.years, 10)}
-            />
+              <Text className="!text-black">{item.levels}</Text>
+              <ProgressBarComponent
+                maxStorage={10}
+                currentStorage={parseInt(item.levels, 10)}
+              />
             </div>
           </div>
         ))}

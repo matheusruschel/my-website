@@ -1,11 +1,10 @@
-import IconComponent from "@/components/general/icon-component";
 import InformationPanel from "../components/information-panel";
-import ButtonTitleComponent from "@/components/general/button-title-component";
 import { getHome } from "@/contentful/home";
 import Text from "@/components/general/text-component";
 import ProfilePage from "@/components/profile-page";
 import RowListComponent from "@/components/general/row-list-component";
-import { mapSkillsToRowList } from "@/mapper/skill-mapper";
+import { mapSkillsToRowList } from "@/functions/skill-mapper";
+import TwoRowListComponents from "@/components/general/two-col-list-component";
 
 export default async function Home() {
   const homepageProps = await getHome();
@@ -16,9 +15,13 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center content-center">
-      <InformationPanel headerText={homepageProps.headerText ?? ""}>
-        <ProfilePage {...homepageProps}/>
-        {skills && <RowListComponent items={mapSkillsToRowList(skills).items} />}
+      <InformationPanel headerTitle={homepageProps.headerTitle ?? ""}>
+        <ProfilePage {...homepageProps} />
+        <Text className="py-[10px] min-w-[100px] font-dePixelHalbfett text-black !text-[12px]">
+          {homepageProps.listTitle}
+        </Text>
+
+        <TwoRowListComponents skills={skills} />
       </InformationPanel>
     </main>
   );

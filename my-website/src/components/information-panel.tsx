@@ -5,7 +5,7 @@ import GrayPanel from "./general/gray-panel";
 
 type Props = {
   className?: ClassNameValue;
-  headerText: String;
+  headerTitle: String;
 } & {
   children: React.ReactNode;
 };
@@ -16,7 +16,7 @@ export default function InformationPanel(props: Props) {
     <GrayPanel className="flex flex-col items-center h-3/4 w-8/12 shadow-sharp" isBottomBorderEnabled={false}>
       <div className="px-[5px] pb-[5px] flex flex-col items-center">
         <Text className="font-dePixelHalbfett text-black py-[5px] !text-[12px]">
-          {props.headerText}
+          {props.headerTitle}
         </Text>
         <div className="grow w-full">{props.children}</div>
       </div>

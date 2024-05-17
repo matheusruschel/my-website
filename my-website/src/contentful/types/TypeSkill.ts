@@ -2,7 +2,8 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeSkillFields {
     title?: EntryFieldTypes.Symbol;
-    years?: EntryFieldTypes.Symbol;
+    level: EntryFieldTypes.Symbol;
+    icon?: EntryFieldTypes.Symbol;
 }
 
 export type TypeSkillSkeleton = EntrySkeletonType<TypeSkillFields, "skill">;

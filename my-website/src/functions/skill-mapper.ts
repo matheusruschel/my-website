@@ -4,7 +4,7 @@ import { Entry } from "contentful";
 export type RowList = {
   items: {
     title: string;
-    years: string;
+    levels: string;
   }[];
 };
 
@@ -15,7 +15,7 @@ export const mapSkillsToRowList = (skills: (Entry<TypeSkillSkeleton, "WITHOUT_UN
       .filter((skill): skill is Entry<TypeSkillSkeleton, "WITHOUT_UNRESOLVABLE_LINKS", string> => skill !== undefined)
       .map(skill => ({
         title: skill.fields.title ?? "",
-        years: skill.fields.years ?? "",
+        levels: skill.fields.level ?? "",
       })),
   };
 };
