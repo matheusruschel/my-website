@@ -4,7 +4,8 @@ export type TextVariant =
   | "title"
   | "body"
   | "link"
-  | "button";
+  | "button"
+  | "trademark";
 
 export type ButtonVariant = "primary" | "secondary" | "tertiary" | "quaternary";
 

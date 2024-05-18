@@ -18,9 +18,12 @@ export default function InformationPanel(props: Props) {
       isBottomBorderEnabled={false}
     >
       <div className="px-[5px] pb-[5px] flex flex-col items-center">
-        <div className="flex flex-row">
-          <Text variant={"title"} className="py-[5px]">
+        <div className="relative flex items-center justify-center w-full">
+          <Text variant={"title"} className="py-[5px] flex-grow text-center">
             {props.headerTitle}
+          </Text>
+          <Text variant={"trademark"} className="absolute right-0 sm:hidden lg:flex md:flex ">
+            {"© matruschel"}
           </Text>
         </div>
         <div className="grow w-full">{props.children}</div>

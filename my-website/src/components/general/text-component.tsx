@@ -9,11 +9,12 @@ type Props = {
 };
 
 const FONT_SIZES: Record<TextVariant, string> = {
+  trademark: "font-dePixelBreitFett text-gray-500 ml-auto lg:!text-[12px] md:!text-[10px] sm:!text-[10px]",
   header: "font-apple text-black lg:!text-[120px] md:!text-[80px] sm:!text-[55px]",
   title:
-    "font-dePixelHalbfett text-black leading-[91%] lg:text-[13px] lg:leading-[104%] md:text-[13px] md:leading-[104%] sm:text-[13px] sm:leading-[91%]",
+    "font-dePixelHalbfett text-black lg:text-[13px] md:text-[13px]  sm:text-[13px] ",
   body:
-    "font-dePixelSchmal text-black leading-[150%] lg:text-[15px] lg:leading-[145%] md:text-[14px] md:leading-[120%] sm:text-[15px] sm:leading-[150%]",
+    "font-dePixelSchmal text-black lg:text-[15px] md:text-[14px] sm:text-[15px]",
   link:
     "font-medium text-black tracking-[-0.5px] hover:underline leading-[219%] lg:text-[15px] lg:leading-[219%] md:text-[15px] md:leading-[219%] sm:text-[14px] sm:leading-[219%]",
   button:
