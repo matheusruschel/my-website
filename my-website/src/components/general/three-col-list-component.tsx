@@ -2,19 +2,19 @@ import { TypeSkillSkeleton } from "@/contentful/types";
 import RowListComponent from "./row-list-component";
 import { Entry } from "contentful";
 import { RowList, mapSkillsToRowList } from "@/functions/skill-mapper";
-import { splitArrayInHalf } from "@/functions/split-array";
+import { splitArrayIn } from "@/functions/split-array";
 
-type TwoRowListComponentsProps = {
+type ThreeRowListComponentsProps = {
   skills: (
     | Entry<TypeSkillSkeleton, "WITHOUT_UNRESOLVABLE_LINKS", string>
     | undefined
   )[];
 };
 
-const TwoRowListComponents: React.FC<TwoRowListComponentsProps> = ({
+const TwoRowListComponents: React.FC<ThreeRowListComponentsProps> = ({
   skills,
 }) => {
-  const arrays = splitArrayInHalf(mapSkillsToRowList(skills).items);
+  const arrays = splitArrayIn(mapSkillsToRowList(skills).items, 3);
 
   return (
     <div>
@@ -22,8 +22,9 @@ const TwoRowListComponents: React.FC<TwoRowListComponentsProps> = ({
         <RowListComponent items={mapSkillsToRowList(skills).items} />
       </div>
       <div className="md:flex lg:flex sm:hidden flex-row space-x-2.5 w-full ">
-        <RowListComponent items={arrays[0]} />
-        <RowListComponent items={arrays[1]} />
+        {arrays?.map((array: any, index) => (
+          <RowListComponent key={index} items={array} />
+        ))}
       </div>
     </div>
   );

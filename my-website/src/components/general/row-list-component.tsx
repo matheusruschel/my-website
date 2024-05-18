@@ -20,7 +20,9 @@ export default function RowListComponent(props: Props) {
           >
             <div className="flex flex-row">
               <IconComponent iconName={item.icon} />
-              <Text className="!text-black">{item.title}</Text>
+              <Text variant={"body"} className="!place-self-center">
+                {item.title}
+              </Text>
             </div>
           </div>
         ))}

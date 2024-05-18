@@ -17,7 +17,7 @@ export default function HeroBanner(props: Props) {
           alt="Icon"
           priority={true}
         />
-        <Text className="md:inline lg:inline pl-[20px] font-apple text-black lg:!text-[120px] md:!text-[80px] sm:!text-[55px]">
+        <Text variant={"header"} className="md:inline lg:inline pl-[20px]">
           {title}
         </Text>
       </div>
