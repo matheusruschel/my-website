@@ -20,7 +20,6 @@ export default async function Home() {
         <Text className="py-[10px] min-w-[100px] font-dePixelHalbfett text-black !text-[12px]">
           {homepageProps.listTitle}
         </Text>
-
         <TwoRowListComponents skills={skills} />
       </InformationPanel>
     </main>

@@ -8,7 +8,7 @@ type TwoRowListComponentsProps = {
   skills: (
     | Entry<TypeSkillSkeleton, "WITHOUT_UNRESOLVABLE_LINKS", string>
     | undefined
-  )[]; // Adjust the type as needed
+  )[];
 };
 
 const TwoRowListComponents: React.FC<TwoRowListComponentsProps> = ({

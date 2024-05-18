@@ -5,6 +5,7 @@ export type RowList = {
   items: {
     title: string;
     levels: string;
+    icon: string;
   }[];
 };
 
@@ -16,6 +17,7 @@ export const mapSkillsToRowList = (skills: (Entry<TypeSkillSkeleton, "WITHOUT_UN
       .map(skill => ({
         title: skill.fields.title ?? "",
         levels: skill.fields.level ?? "",
+        icon: skill.fields.icon ?? ""
       })),
   };
 };

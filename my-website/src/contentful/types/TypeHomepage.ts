@@ -4,8 +4,8 @@ import type { TypeTitleAndDescriptionSkeleton } from "./TypeTitleAndDescription"
 
 export interface TypeHomepageFields {
     headerTitle?: EntryFieldTypes.Symbol;
-    heroTitle?: EntryFieldTypes.Symbol;
-    titleAndDescriptions?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeTitleAndDescriptionSkeleton>>;
+    heroTitle: EntryFieldTypes.Symbol;
+    titleAndDescriptions: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeTitleAndDescriptionSkeleton>>;
     skills?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeSkillSkeleton>>;
     listTitle: EntryFieldTypes.Symbol;
 }
