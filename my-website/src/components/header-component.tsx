@@ -1,12 +1,24 @@
-"use client";
-import { useState } from "react";
+"use client"; // Ensure this component is client-side only
+import { useEffect, useState } from "react";
 import ButtonTitleComponent from "./general/button-title-component";
 import { HEADER } from "./utils/header";
+import { usePathname } from "next/navigation"; // Import useRouter
 
 export default function Header() {
   const { headerMenus } = HEADER || {};
+  const currentPath = usePathname();
+  let tabSelectedIndex = 0;
 
-  const [indexOfButtonSelected, setIndexOfButtonSelected] = useState(0);
+  const activeIndex = headerMenus.findIndex(
+    (tab) => tab.fields.url === currentPath
+  );
+  if (activeIndex !== -1) {
+    tabSelectedIndex = activeIndex;
+  }
+
+  const [indexOfButtonSelected, setIndexOfButtonSelected] = useState(
+    tabSelectedIndex
+  );
 
   return (
     <div className="py-[15px] flex items-center justify-center content-center">
@@ -17,6 +29,7 @@ export default function Header() {
             index={index}
             iconName={headerMenu?.fields.iconPath ?? "/17.png"}
             title={headerMenu?.fields.buttonTitle ?? ""}
+            url={headerMenu?.fields.url}
             isSelected={indexOfButtonSelected === index}
             onClick={(buttonIndex) => setIndexOfButtonSelected(buttonIndex)}
           ></ButtonTitleComponent>

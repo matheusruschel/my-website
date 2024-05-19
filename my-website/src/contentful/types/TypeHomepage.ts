@@ -6,7 +6,7 @@ export interface TypeHomepageFields {
     headerTitle?: EntryFieldTypes.Symbol;
     heroTitle: EntryFieldTypes.Symbol;
     titleAndDescriptions: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeTitleAndDescriptionSkeleton>>;
-    skills?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeSkillSkeleton>>;
+    skills: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeSkillSkeleton>>;
     listTitle: EntryFieldTypes.Symbol;
 }
 

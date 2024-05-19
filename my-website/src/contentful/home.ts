@@ -9,7 +9,7 @@ export const getHome = async () => {
       include: 10,
     });
 
-  if (!result) return {};
+  if (!result) return null;
 
   return result?.items[0].fields;
 };

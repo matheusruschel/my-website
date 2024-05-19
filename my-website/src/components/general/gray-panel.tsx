@@ -14,7 +14,7 @@ export default function GrayPanel({
   return (
     <section className={`${className}`}>
       <div
-        className={`border-[2.2px] border-l-black border-r-black border-b-black border-t-black`}
+        className={`border-[2.2px] border-l-black border-r-black border-b-black border-t-black w-full`}
       >
         <div
           className={`bg-panel-gray border-l-white border-t-white border-r-white border-[2.2px]`}

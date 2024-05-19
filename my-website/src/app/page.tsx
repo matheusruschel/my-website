@@ -1,10 +1,8 @@
-import InformationPanel from "../components/information-panel";
+import InformationPanel from "../components/general/information-panel";
 import { getHome } from "@/contentful/home";
 import Text from "@/components/general/text-component";
 import ProfilePage from "@/components/profile-page";
-import RowListComponent from "@/components/general/row-list-component";
-import { mapSkillsToRowList } from "@/functions/skill-mapper";
-import TwoRowListComponents from "@/components/general/three-col-list-component";
+import ThreeRowListComponents from "@/components/general/three-col-list-component";
 
 export default async function Home() {
   const homepageProps = await getHome();
@@ -20,7 +18,7 @@ export default async function Home() {
         <Text variant={"title"} className="py-[10px] min-w-[100px]">
           {homepageProps.listTitle}
         </Text>
-        <TwoRowListComponents skills={skills} />
+        <ThreeRowListComponents skills={skills} />
       </InformationPanel>
     </main>
   );

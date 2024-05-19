@@ -11,6 +11,7 @@ type Props = {
   classNameButton?: ClassNameValue;
   iconName: string;
   title: string;
+  url: string;
   isSelected: boolean;
   index: number;
   onClick: (index: number) => void;
@@ -25,6 +26,7 @@ export default function ButtonTitleComponent({
   width = 50,
   height = 50,
   title,
+  url,
   classNameTitle,
   classNameButton,
   isSelected,
@@ -39,7 +41,7 @@ export default function ButtonTitleComponent({
     <div className="flex flex-col min-w-[100px] sm:px-5 md:px-[35px] lg:px-[50px] !items-center !justify-center !content-center">
       <Link
         className="flex flex-col !items-center !justify-center !content-center"
-        href={"/"}
+        href={url}
         onClick={() => onClick(index)}
       >
         <IconComponent

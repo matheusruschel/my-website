@@ -2,7 +2,6 @@
 import Text from "./text-component";
 import { RowList } from "@/functions/skill-mapper";
 import GrayPanel from "./gray-panel";
-import ProgressBarComponent from "./progress-bar-component";
 import IconComponent from "./icon-component";
 
 type Props = RowList;

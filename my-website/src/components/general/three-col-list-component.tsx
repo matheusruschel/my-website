@@ -1,7 +1,7 @@
 import { TypeSkillSkeleton } from "@/contentful/types";
 import RowListComponent from "./row-list-component";
 import { Entry } from "contentful";
-import { RowList, mapSkillsToRowList } from "@/functions/skill-mapper";
+import { mapSkillsToRowList } from "@/functions/skill-mapper";
 import { splitArrayIn } from "@/functions/split-array";
 
 type ThreeRowListComponentsProps = {
@@ -11,7 +11,7 @@ type ThreeRowListComponentsProps = {
   )[];
 };
 
-const TwoRowListComponents: React.FC<ThreeRowListComponentsProps> = ({
+const ThreeRowListComponents: React.FC<ThreeRowListComponentsProps> = ({
   skills,
 }) => {
   const arrays = splitArrayIn(mapSkillsToRowList(skills).items, 3);
@@ -30,4 +30,4 @@ const TwoRowListComponents: React.FC<ThreeRowListComponentsProps> = ({
   );
 };
 
-export default TwoRowListComponents;
+export default ThreeRowListComponents;
