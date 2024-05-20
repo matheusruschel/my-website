@@ -6,11 +6,7 @@ import Image from "next/image";
 
 type Props = {
   singleExperience:
-    | Entry<
-        TypeExperienceSkeleton,
-        "WITHOUT_UNRESOLVABLE_LINKS",
-        string
-      >
+    | Entry<TypeExperienceSkeleton, "WITHOUT_UNRESOLVABLE_LINKS", string>
     | undefined;
 };
 
@@ -29,7 +25,7 @@ export default function ExperienceCard(props: Props) {
 
   return (
     <GrayPanel className="flex flex-col py-[10px]">
-      <div className="flex items-start">
+      <div className="flex items-start p-[5px]">
         {/* Company Logo */}
         {imageUrl && (
           <div className="w-16 h-16 mr-4">
@@ -39,16 +35,18 @@ export default function ExperienceCard(props: Props) {
         <div className="flex-grow">
           {/* Company Title */}
           <Text variant="title" className="font-semibold">
-            {companyName}
+            {positionTitle}
           </Text>
           {/* Job Position */}
-          <Text className="text-gray-500">{positionTitle}</Text>
+          <Text variant="bodyVariant" className="pt-[2px]">{companyName}</Text>
         </div>
         {/* Time Period */}
-        <Text className="text-right text-gray-400">{time}</Text>
+        <Text variant="bodyVariant" className="text-right">
+          {time}
+        </Text>
       </div>
       {/* Job Description */}
-      <Text>{description}</Text>
+      <Text className="whitespace-pre-line p-[15px]">{description}</Text>
     </GrayPanel>
   );
 }

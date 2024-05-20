@@ -5,7 +5,7 @@ export interface TypeExperienceFields {
     positionTitle: EntryFieldTypes.Symbol;
     time: EntryFieldTypes.Symbol;
     imageUrl: EntryFieldTypes.Symbol;
-    description: EntryFieldTypes.Symbol;
+    description: EntryFieldTypes.Text;
 }
 
 export type TypeExperienceSkeleton = EntrySkeletonType<TypeExperienceFields, "experience">;

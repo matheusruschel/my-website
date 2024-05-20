@@ -6,6 +6,8 @@ export interface TypePortfolioPanelFields {
     resumeUrl: EntryFieldTypes.Symbol;
     githubUrl: EntryFieldTypes.Symbol;
     title: EntryFieldTypes.Symbol;
+    linkedinTitle: EntryFieldTypes.Symbol;
+    linkedinUrl: EntryFieldTypes.Symbol;
 }
 
 export type TypePortfolioPanelSkeleton = EntrySkeletonType<TypePortfolioPanelFields, "portfolioPanel">;

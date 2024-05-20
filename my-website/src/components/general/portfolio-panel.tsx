@@ -11,7 +11,15 @@ type Props = Entry<
 >["fields"];
 
 export default function PortfolioPanel(props: Props) {
-  const { resumeTitle, githubTitle, resumeUrl, githubUrl, title } = props;
+  const {
+    resumeTitle,
+    githubTitle,
+    resumeUrl,
+    githubUrl,
+    title,
+    linkedinTitle,
+    linkedinUrl,
+  } = props;
 
   return (
     <GrayPanel>
@@ -20,9 +28,10 @@ export default function PortfolioPanel(props: Props) {
           {title}
         </Text>
       </div>
-      <div className="flex flex-row items-center justify-center space-x-[100px] py-[5px]">
+      <div className="flex md:flex-row sm:flex-col items-center justify-center md:space-x-[100px] sm:space-y-[10px] py-[5px]">
         <LinkComponent title={resumeTitle} url={resumeUrl} />
         <LinkComponent title={githubTitle} url={githubUrl} />
+        <LinkComponent title={linkedinTitle} url={linkedinUrl} />
       </div>
     </GrayPanel>
   );
