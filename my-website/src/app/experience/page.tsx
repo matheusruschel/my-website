@@ -1,10 +1,9 @@
-import Text from "@/components/general/text-component";
 import { getExperience } from "@/contentful/experience";
 import InformationPanel from "@/components/general/information-panel";
 import PortfolioPanel from "@/components/general/portfolio-panel";
 import ExperienceCard from "@/components/general/experience-card";
 
-export default async function Experience() {
+export default async function ExperiencePage() {
   const experiencePageProps = await getExperience();
 
   if (!experiencePageProps) return null;

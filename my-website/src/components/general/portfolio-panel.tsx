@@ -29,9 +29,9 @@ export default function PortfolioPanel(props: Props) {
         </Text>
       </div>
       <div className="flex md:flex-row sm:flex-col items-center justify-center md:space-x-[100px] sm:space-y-[10px] py-[5px]">
-        <LinkComponent title={resumeTitle} url={resumeUrl} />
-        <LinkComponent title={githubTitle} url={githubUrl} />
-        <LinkComponent title={linkedinTitle} url={linkedinUrl} />
+        <LinkComponent title={resumeTitle} url={resumeUrl}/>
+        <LinkComponent title={githubTitle} url={githubUrl}/>
+        <LinkComponent title={linkedinTitle} url={linkedinUrl}/>
       </div>
     </GrayPanel>
   );

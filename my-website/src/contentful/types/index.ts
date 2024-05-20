@@ -1,3 +1,4 @@
+export type { TypeContactPage, TypeContactPageFields, TypeContactPageSkeleton } from "./TypeContactPage";
 export type { TypeExperience, TypeExperienceFields, TypeExperienceSkeleton } from "./TypeExperience";
 export type { TypeExperiencePage, TypeExperiencePageFields, TypeExperiencePageSkeleton } from "./TypeExperiencePage";
 export type { TypeHeader, TypeHeaderFields, TypeHeaderSkeleton } from "./TypeHeader";
