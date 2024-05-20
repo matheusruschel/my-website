@@ -18,10 +18,10 @@ const ThreeRowListComponents: React.FC<ThreeRowListComponentsProps> = ({
 
   return (
     <div>
-      <div className="sm:flex flex-col md:hidden lg:hidden">
+      <div className="flex flex-col md:hidden lg:hidden">
         <RowListComponent items={mapSkillsToRowList(skills).items} />
       </div>
-      <div className="md:flex lg:flex sm:hidden flex-row space-x-2.5 w-full ">
+      <div className="hidden md:flex lg:flex flex-row space-x-2.5 w-full ">
         {arrays?.map((array: any, index) => (
           <RowListComponent key={index} items={array} />
         ))}

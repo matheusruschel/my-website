@@ -14,7 +14,7 @@ export default function InformationPanel(props: Props) {
   const { className } = props;
   return (
     <GrayPanel
-      className={`flex flex-col items-center h-3/4 w-8/12 shadow-sharp ${className}`}
+      className={`flex flex-col items-center h-3/4 w-[80%] sm:w-8/12 shadow-sharp ${className}`}
       isBottomBorderEnabled={false}
     >
       <div className="px-[5px] pb-[5px] flex flex-col items-center">
@@ -24,7 +24,7 @@ export default function InformationPanel(props: Props) {
           </Text>
           <Text
             variant={"trademark"}
-            className="absolute right-0 sm:hidden lg:flex md:flex "
+            className="absolute right-0 hidden md:flex "
           >
             {"© matruschel"}
           </Text>

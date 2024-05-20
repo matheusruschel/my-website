@@ -63,7 +63,7 @@ export default function ContactComponent({ contactPageProps }: Props) {
     <main className="flex flex-col items-center justify-center content-center">
       <InformationPanel headerTitle={headerTitle ?? ""}>
         <GrayPanel>
-          <form action="/" name="contact" className="flex flex-col space-y-6 w-1/2 mx-auto pb-[15px]" data-netlify="true">
+          <form action="/" name="contact" className="flex flex-col space-y-6 w-[90%] md:w-[80%] lg:w-[70%] mx-auto pb-[15px]" data-netlify="true">
             <InputField
               label={firstNameTitle}
               name="firstName"

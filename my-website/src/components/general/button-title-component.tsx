@@ -38,7 +38,7 @@ export default function ButtonTitleComponent({
   if (iconName === "") return null;
 
   return (
-    <div className="flex flex-col min-w-[100px] sm:px-5 md:px-[35px] lg:px-[50px] !items-center !justify-center !content-center">
+    <div className="flex flex-col min-w-[100px] px-5 md:px-[35px] lg:px-[50px] !items-center !justify-center !content-center">
       <Link
         className="flex flex-col !items-center !justify-center !content-center"
         href={url}

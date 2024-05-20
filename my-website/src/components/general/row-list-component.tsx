@@ -10,7 +10,7 @@ export default function RowListComponent(props: Props) {
   const { items } = props;
 
   return (
-    <GrayPanel className="lg:!w-[50%] md:!w-[50%] !w-[100%]">
+    <GrayPanel className="md:!w-[50%] lg:!w-[50%]  !w-[100%]">
       <div className="flex flex-col bg-list-gray">
         {items?.map((item, index) => (
           <div

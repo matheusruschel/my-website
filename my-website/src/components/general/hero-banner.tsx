@@ -9,7 +9,7 @@ export default function HeroBanner(props: Props) {
   const { title } = props;
   return (
     <div className="items-center justify-center content-center p-4 bg-white border-opacity-70 border-[2.2px] border-black shadow-sharp-blur">
-      <div className="flex lg:flex-row md:flex-row sm:flex-col items-center justify-center">
+      <div className="flex flex-col md:flex-row  items-center justify-center">
         <Image
           width={150}
           height={150}
@@ -17,7 +17,7 @@ export default function HeroBanner(props: Props) {
           alt="Icon"
           priority={true}
         />
-        <Text variant={"header"} className="md:inline lg:inline pl-[20px]">
+        <Text variant="header" className="hidden md:inline lg:inline pl-[20px]">
           {title}
         </Text>
       </div>

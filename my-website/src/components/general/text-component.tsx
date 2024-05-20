@@ -12,13 +12,13 @@ const FONT_SIZES: Record<TextVariant, string> = {
   trademark:
     "font-dePixelBreitFett text-gray-500 ml-auto lg:!text-[12px] md:!text-[10px] sm:!text-[10px]",
   header:
-    "font-apple text-black lg:!text-[120px] md:!text-[80px] sm:!text-[55px]",
+    "font-apple text-black leading-[100%] text-[30px] sm:!text-[55px] lg:!text-[120px] md:!text-[80px]",
   title:
-    "font-dePixelHalbfett text-black lg:text-[13px] md:text-[13px]  sm:text-[13px] ",
+    "font-dePixelHalbfett text-black text-[13px] lg:text-[14px] md:text-[14px] sm:text-[14px]",
   body:
-    "font-dePixelSchmal text-black lg:text-[15px] md:text-[14px] sm:text-[15px]",
+    "font-dePixelSchmal text-black text-[12px] sm:text-[13px] lg:text-[15px] md:text-[14px] ",
   bodyVariant:
-    "font-dePixelSchmal lg:text-[15px] md:text-[14px] sm:text-[15px] text-gray-500 ml-auto",
+    "font-dePixelSchmal text-[12px] sm:text-[13px] lg:text-[15px] md:text-[14px]  text-gray-500 ml-auto",
   link:
     "font-medium text-black tracking-[-0.5px] hover:underline leading-[219%] lg:text-[15px] lg:leading-[219%] md:text-[15px] md:leading-[219%] sm:text-[14px] sm:leading-[219%]",
   button:
