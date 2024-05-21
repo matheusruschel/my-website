@@ -4,7 +4,6 @@ import InformationPanel from "@/components/general/information-panel";
 import GrayPanel from "@/components/general/gray-panel";
 import MessageSentComponent from "./message-sent";
 import InputField from "./input-field";
-import LinkComponent from "./link-component";
 
 type Props = {
   contactPageProps: {
@@ -35,11 +34,31 @@ export default function ContactComponent({ contactPageProps }: Props) {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      const myForm = event.target as HTMLFormElement;
+      const formData = new FormData(myForm);
+      const formBody = new URLSearchParams(formData as any).toString();
+
+      console.log("Form data being sent:", formBody);
+
+      const res = await fetch("/thankyou.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody,
+      });
+
+      console.log("Response status:", res.status);
+
+      if (res.status === 200) {
+        setIsSubmitted(true);
+      } else {
+        setIsSubmitted(false);
+      }
+    } catch (e) {
+      setIsSubmitted(false);
+    }
   };
 
   const {
@@ -50,12 +69,16 @@ export default function ContactComponent({ contactPageProps }: Props) {
     buttonSendTitle,
     headerTitle,
     messageSentSuccessTitle,
-    messageSentSuccessText
+    messageSentSuccessText,
   } = contactPageProps;
 
   if (isSubmitted) {
     return (
-      <MessageSentComponent headerTitle={headerTitle} messageSentText={messageSentSuccessText} messageSentTitle={messageSentSuccessTitle}/>
+      <MessageSentComponent
+        headerTitle={headerTitle}
+        messageSentText={messageSentSuccessText}
+        messageSentTitle={messageSentSuccessTitle}
+      />
     );
   }
 
@@ -63,7 +86,13 @@ export default function ContactComponent({ contactPageProps }: Props) {
     <main className="flex flex-col items-center justify-center content-center">
       <InformationPanel headerTitle={headerTitle ?? ""}>
         <GrayPanel>
-          <form action="/" name="contact" className="flex flex-col space-y-6 w-[90%] md:w-[80%] lg:w-[70%] mx-auto pb-[15px]" data-netlify="true">
+          <form
+            name="contact"
+            data-netlify="true"
+            className="flex flex-col space-y-6 w-[90%] md:w-[80%] lg:w-[70%] mx-auto pb-[15px]"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <InputField
               label={firstNameTitle}
               name="firstName"
