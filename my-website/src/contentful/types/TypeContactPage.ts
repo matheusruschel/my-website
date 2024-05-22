@@ -1,8 +1,8 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypeContactPageFields {
-    firstNameTitle: EntryFieldTypes.Symbol;
-    lastNameTitle: EntryFieldTypes.Symbol;
+    fullNameTitle: EntryFieldTypes.Symbol;
+    emailTitle: EntryFieldTypes.Symbol;
     companyTitle: EntryFieldTypes.Symbol;
     messageTitle: EntryFieldTypes.Symbol;
     buttonSendTitle: EntryFieldTypes.Symbol;

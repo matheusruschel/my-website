@@ -4,11 +4,12 @@ import InformationPanel from "@/components/general/information-panel";
 import GrayPanel from "@/components/general/gray-panel";
 import MessageSentComponent from "./message-sent";
 import InputField from "./input-field";
+import Text from "./text-component";
 
 type Props = {
   contactPageProps: {
-    firstNameTitle: string;
-    lastNameTitle: string;
+    fullNameTitle: string;
+    emailTitle: string;
     companyTitle: string;
     messageTitle: string;
     buttonSendTitle: string;
@@ -21,11 +22,12 @@ type Props = {
 export default function ContactComponent({ contactPageProps }: Props) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
+    email: "",
     company: "",
     message: "",
   });
+  const [errors, setErrors] = useState<string[]>([]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,6 +38,11 @@ export default function ContactComponent({ contactPageProps }: Props) {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const newErrors = validateForm(formData);
+    if (newErrors.length > 0) {
+      setErrors(newErrors);
+      return;
+    }
     try {
       const myForm = event.target as HTMLFormElement;
       const formData = new FormData(myForm);
@@ -54,16 +61,27 @@ export default function ContactComponent({ contactPageProps }: Props) {
       if (res.status === 200) {
         setIsSubmitted(true);
       } else {
+        setErrors(["Submission failed. Please try again."]);
         setIsSubmitted(false);
       }
     } catch (e) {
+      setErrors(["Submission failed. Please try again."]);
       setIsSubmitted(false);
     }
   };
 
+  const validateForm = (data: typeof formData) => {
+    const newErrors = [];
+    if (!data.fullName) newErrors.push("Full Name is required.");
+    if (!data.email) newErrors.push("Email is required.");
+    if (!data.company) newErrors.push("Company is required.");
+    if (!data.message) newErrors.push("Message is required.");
+    return newErrors;
+  };
+
   const {
-    firstNameTitle,
-    lastNameTitle,
+    fullNameTitle,
+    emailTitle,
     companyTitle,
     messageTitle,
     buttonSendTitle,
@@ -94,18 +112,21 @@ export default function ContactComponent({ contactPageProps }: Props) {
           >
             <input type="hidden" name="form-name" value="contact" />
             <InputField
-              label={firstNameTitle}
-              name="firstName"
-              value={formData.firstName}
+              type="text"
+              label={fullNameTitle}
+              name="fullName"
+              value={formData.fullName}
               onChange={handleChange}
             />
             <InputField
-              label={lastNameTitle}
-              name="lastName"
-              value={formData.lastName}
+              type="email"
+              label={emailTitle}
+              name="email"
+              value={formData.email}
               onChange={handleChange}
             />
             <InputField
+              type="text"
               label={companyTitle}
               name="company"
               value={formData.company}
@@ -118,6 +139,12 @@ export default function ContactComponent({ contactPageProps }: Props) {
               onChange={handleChange}
               type="textarea"
             />
+            {errors.length > 0 &&
+              errors.map((error, index) => (
+                <Text className="text-red-500" key={index}>
+                  {error}
+                </Text>
+              ))}
             <button
               type="submit"
               className="font-dePixelHalbfett text-black !text-[15px] !text-blue-500 underline"

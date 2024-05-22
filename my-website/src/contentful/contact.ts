@@ -15,7 +15,7 @@ export const getContact = async () => {
 
   if (!result) return null;
 
-  const { firstNameTitle, lastNameTitle, companyTitle, messageTitle, buttonSendTitle, headerTitle, messageSentSuccessText, messageSentSuccessTitle} = result?.items[0].fields;
+  const { fullNameTitle, emailTitle, companyTitle, messageTitle, buttonSendTitle, headerTitle, messageSentSuccessText, messageSentSuccessTitle} = result?.items[0].fields;
 
-  return { firstNameTitle, lastNameTitle, companyTitle, messageTitle, buttonSendTitle, headerTitle, messageSentSuccessText, messageSentSuccessTitle};
+  return { fullNameTitle, emailTitle, companyTitle, messageTitle, buttonSendTitle, headerTitle, messageSentSuccessText, messageSentSuccessTitle};
 };

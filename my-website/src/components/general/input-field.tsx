@@ -1,20 +1,29 @@
-import React from 'react';
-import Text from './text-component';
+import React from "react";
+import Text from "./text-component";
 
 type InputFieldProps = {
   label: string;
   name: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  type?: 'text' | 'textarea';
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  type?: "text" | "textarea" | "email";
   className?: string;
 };
 
-const InputField: React.FC<InputFieldProps> = ({ label, name, value, onChange, type = 'text', className }) => {
+const InputField: React.FC<InputFieldProps> = ({
+  label,
+  name,
+  value,
+  onChange,
+  type = "text",
+  className,
+}) => {
   return (
     <div className={`flex flex-col ${className} space-y-[5px]`}>
       <Text variant="title">{label}</Text>
-      {type === 'textarea' ? (
+      {type === "textarea" ? (
         <textarea
           name={name}
           value={value}
@@ -23,7 +32,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, value, onChange, t
         />
       ) : (
         <input
-          type="text"
+          type={type}
           name={name}
           value={value}
           onChange={onChange}
